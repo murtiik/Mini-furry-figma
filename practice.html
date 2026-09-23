@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Я учусь веб-разработке — Liza</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #0a0a0f;
+        --bg-soft: #121020;
+        --text: #ece7f7;
+        --muted: #a399c2;
+        --neon: #c77dff;
+        --neon-deep: #9d4edd;
+        --neon-soft: #e0aaff;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Outfit", -apple-system, "Segoe UI", sans-serif;
+        background:
+          radial-gradient(600px 420px at 12% -6%, rgba(157, 78, 221, 0.2), transparent 70%),
+          radial-gradient(520px 400px at 96% 4%, rgba(199, 125, 255, 0.14), transparent 70%),
+          radial-gradient(700px 500px at 50% 115%, rgba(78, 41, 148, 0.22), transparent 70%),
+          var(--bg);
+        color: var(--text);
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 40px 20px;
+      }
+
+      .page {
+        width: 100%;
+        max-width: 680px;
+      }
+
+      .kicker {
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        color: var(--neon-soft);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .kicker::before {
+        content: "";
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--neon);
+        box-shadow: 0 0 12px var(--neon);
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-areas: "text cat";
+        gap: clamp(24px, 6vw, 64px);
+        align-items: center;
+        margin-top: 28px;
+      }
+
+      .hero-text {
+        grid-area: text;
+      }
+
+      .hero-cat {
+        grid-area: cat;
+      }
+
+      .title {
+        font-size: clamp(2.6rem, 7vw, 4.2rem);
+        font-weight: 700;
+        letter-spacing: -0.03em;
+        line-height: 1.05;
+        background: linear-gradient(92deg, var(--neon-soft) 8%, var(--neon) 48%, var(--neon-deep) 96%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .lead,
+      .about {
+        font-size: 17px;
+        line-height: 1.7;
+        color: var(--muted);
+        max-width: 46ch;
+      }
+
+      .lead {
+        margin-top: 20px;
+      }
+
+      .about {
+        margin-top: 16px;
+      }
+
+      .lead b,
+      .about b {
+        color: var(--text);
+        font-weight: 600;
+      }
+
+      .kitty {
+        width: clamp(150px, 22vw, 230px);
+        display: block;
+        filter: drop-shadow(0 0 18px rgba(199, 125, 255, 0.5))
+          drop-shadow(0 0 46px rgba(199, 125, 255, 0.22));
+        animation: floaty 6s ease-in-out infinite;
+      }
+
+      .kitty line,
+      .kitty path,
+      .kitty polyline {
+        stroke: var(--neon);
+      }
+
+      @keyframes floaty {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-9px);
+        }
+      }
+
+      .divider {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin: 42px 0 26px;
+      }
+
+      .divider::before,
+      .divider::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: rgba(199, 125, 255, 0.18);
+      }
+
+      .paw {
+        width: 20px;
+        color: var(--neon);
+        filter: drop-shadow(0 0 8px rgba(199, 125, 255, 0.6));
+      }
+
+      .foot {
+        font-size: 13px;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: rgba(163, 153, 194, 0.7);
+      }
+
+      @media (max-width: 640px) {
+        .hero {
+          grid-template-columns: 1fr;
+          grid-template-areas: "cat" "text";
+          gap: 20px;
+        }
+
+        .kitty {
+          width: 150px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .kitty {
+          animation: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <p class="kicker">Привет, я — Liza</p>
+      <section class="hero">
+        <div class="hero-text">
+          <h1 class="title">Я учусь веб-разработке</h1>
+          <p class="lead">
+            Уже разобралась, как устроены <b>HTML</b> и <b>CSS</b>, и теперь
+            делаю живые страницы: заголовки, абзацы, цвет и декор.
+          </p>
+          <p class="about">
+            Пока это маленькая тренировочная страничка, но дальше — больше:
+            сборки, шрифты, анимации и, конечно, ещё котов.
+          </p>
+        </div>
+        <svg class="kitty" viewBox="0 0 240 220" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-label="Неоновый котик">
+          <path d="M 90 46 Q 78 12 110 26" />
+          <path d="M 150 46 Q 162 12 130 26" />
+          <path d="M 82 66 C 82 38 102 24 120 24 C 138 24 158 38 158 66 C 158 88 140 100 120 100 C 100 100 82 88 82 66 Z" />
+          <path d="M 100 66 Q 106 74 112 66" />
+          <path d="M 128 66 Q 134 74 140 66" />
+          <path d="M 117 84 L 123 84 L 120 90 Z" />
+          <path d="M 120 90 Q 114 98 108 94" />
+          <path d="M 120 90 Q 126 98 132 94" />
+          <path d="M 76 76 L 34 70" />
+          <path d="M 76 86 L 34 88" />
+          <path d="M 164 76 L 206 70" />
+          <path d="M 164 86 L 206 88" />
+          <path d="M 86 102 C 78 148 82 176 98 190 C 104 196 136 196 142 190 C 158 176 162 148 154 102" />
+          <path d="M 98 190 Q 120 196 142 190" />
+          <path d="M 106 190 L 103 166" />
+          <path d="M 134 190 L 137 166" />
+          <path d="M 156 150 C 186 146 196 118 186 98 C 180 86 166 84 160 92" />
+        </svg>
+      </section>
+
+      <div class="divider">
+        <svg class="paw" viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" aria-label="След лапки">
+          <ellipse cx="12" cy="15" rx="4.4" ry="4" />
+          <ellipse cx="6.2" cy="8.6" rx="1.9" ry="2.2" />
+          <ellipse cx="12" cy="6.4" rx="2" ry="2.4" />
+          <ellipse cx="17.8" cy="8.6" rx="1.9" ry="2.2" />
+        </svg>
+      </div>
+
+      <p class="foot">liza · practice page</p>
+    </main>
+  </body>
+</html>
