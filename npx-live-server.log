@@ -6,3 +6,4 @@ npm warn deprecated opn@6.0.0: The package has been renamed to `open`
 npm warn deprecated uuid@3.4.0: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
 [32mServing "practice.html" at http://127.0.0.1:5500[39m
 [36mReady for changes[39m
+[36mChange detected[39m practice.html
