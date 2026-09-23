@@ -41,8 +41,8 @@ export function Toolbar({ tool, onSelectTool }: ToolbarProps) {
         aria-hidden="true"
       >
         <svg
-          width="18"
-          height="18"
+          width="22"
+          height="22"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
@@ -50,15 +50,15 @@ export function Toolbar({ tool, onSelectTool }: ToolbarProps) {
           strokeLinecap="round"
           strokeLinejoin="round"
         >
-          <path d="M6.8 7.2 5.2 3 2 6l2.5 2.2" />
-          <path d="M17.2 7.2 18.8 3 22 6l-2.5 2.2" />
-          <path d="M8 7.5c-4.4 0-6.6 3-6.6 7 0 4 2 5.7 5 5.7h11.2c3 0 5-1.7 5-5.7 0-4-2.2-7-6.6-7Z" />
-          <circle cx="9" cy="13.4" r="0.9" fill="currentColor" stroke="none" />
-          <circle cx="15" cy="13.4" r="0.9" fill="currentColor" stroke="none" />
-          <path d="M12 14.2 10.8 16h2.4Z" />
-          <path d="M10.2 17.6c.6.4 1.2.6 1.8.6s1.2-.2 1.8-.6" />
-          <path d="M7.4 13.2 3.4 12.2M7.4 15.9l-4 1" />
-          <path d="M16.6 13.2l4-1M16.6 15.9l4 1" />
+          <path d="M5 3.5 1.3 8l5.5.6Z" />
+          <path d="M19 3.5l3.7 4.5-5.5.6Z" />
+          <path d="M8.8 8.6c-4.5 0-6.6 2.8-6.6 6.6 0 3.8 2 5.4 4.8 5.4h10c2.8 0 4.8-1.6 4.8-5.4 0-3.8-2.1-6.6-6.6-6.6Z" />
+          <circle cx="9" cy="14.2" r="0.9" fill="currentColor" stroke="none" />
+          <circle cx="15" cy="14.2" r="0.9" fill="currentColor" stroke="none" />
+          <path d="M12 15 10.8 16.8h2.4Z" />
+          <path d="M10.2 18.4c.6.4 1.2.6 1.8.6s1.2-.2 1.8-.6" />
+          <path d="M7.2 14 3.2 13M7.2 16.6l-4 1" />
+          <path d="M16.8 14l4-1M16.8 16.6l4 1" />
         </svg>
       </div>
     </nav>
